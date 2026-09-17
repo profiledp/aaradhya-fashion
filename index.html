@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Aaradhya Fashion | Bongariya Bazar, Azamgarh</title>
 
@@ -10,6 +13,10 @@
 content="Aaradhya Fashion – Men's Wear, Women's Wear, Kids Wear, Sarees, Kurtis, Winter Collection, Footwear, Bags and more.">
 
 <style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
 
 *{
     margin:0;
@@ -22,53 +29,76 @@ html{
 }
 
 body{
-    font-family:Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     background:#fafafa;
     color:#222;
+    line-height:1.5;
 }
 
-/* ================= HEADER ================= */
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:#ffffff;
-    box-shadow:0 2px 12px rgba(0,0,0,.08);
+    background:rgba(255,255,255,.96);
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
 }
 
 .navbar{
     max-width:1200px;
     margin:auto;
-    padding:14px 20px;
+    min-height:72px;
+    padding:12px 20px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
 
 .logo{
+    color:#8b1e3f;
     font-size:23px;
     font-weight:800;
-    color:#8b1e3f;
+    line-height:1.1;
 }
 
 .logo span{
-    color:#222;
-    font-size:12px;
     display:block;
-    letter-spacing:2px;
+    margin-top:4px;
+    color:#555;
+    font-size:10px;
+    letter-spacing:3px;
 }
 
 nav{
     display:flex;
+    align-items:center;
     gap:22px;
 }
 
 nav a{
-    text-decoration:none;
     color:#333;
-    font-size:14px;
+    font-size:13px;
     font-weight:600;
+    transition:.25s;
 }
 
 nav a:hover{
@@ -77,66 +107,80 @@ nav a:hover{
 
 .menu-btn{
     display:none;
-    font-size:25px;
+    border:0;
+    background:none;
+    font-size:27px;
     cursor:pointer;
 }
 
-/* ================= HERO ================= */
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero{
-    min-height:500px;
+    min-height:590px;
 
     display:flex;
     align-items:center;
 
     background:
-    linear-gradient(90deg,
-    rgba(20,10,15,.85),
-    rgba(20,10,15,.35)),
-    url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1600&q=80")
+    linear-gradient(
+        90deg,
+        rgba(25,12,17,.90),
+        rgba(25,12,17,.42)
+    ),
+    url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1800&q=85")
     center/cover;
 
     color:white;
 }
 
 .hero-content{
-    max-width:1200px;
     width:100%;
+    max-width:1200px;
     margin:auto;
-    padding:50px 20px;
+    padding:70px 20px;
 }
 
 .hero small{
-    color:#ffd5df;
+    color:#e5c18c;
+    font-size:12px;
     font-weight:bold;
-    letter-spacing:2px;
+    letter-spacing:3px;
 }
 
 .hero h1{
-    font-size:55px;
-    max-width:650px;
-    margin:15px 0;
+    max-width:700px;
+    margin:18px 0;
+
+    font-family:Georgia, "Times New Roman", serif;
+
+    font-size:60px;
+    line-height:1.05;
 }
 
 .hero p{
-    max-width:560px;
-    line-height:1.7;
+    max-width:570px;
     color:#eee;
+    font-size:16px;
+    line-height:1.8;
 }
 
 .buttons{
-    margin-top:28px;
     display:flex;
     gap:12px;
     flex-wrap:wrap;
+    margin-top:30px;
 }
 
 .btn{
     display:inline-block;
-    padding:13px 22px;
+    padding:13px 24px;
     border-radius:30px;
-    text-decoration:none;
+    font-size:13px;
     font-weight:bold;
+    transition:.3s;
 }
 
 .btn-primary{
@@ -144,48 +188,67 @@ nav a:hover{
     color:white;
 }
 
+.btn-primary:hover{
+    background:#6f1632;
+    transform:translateY(-2px);
+}
+
 .btn-light{
     background:white;
     color:#222;
 }
 
-/* ================= SECTION ================= */
+.btn-light:hover{
+    background:#f1f1f1;
+    transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
 
 section{
     max-width:1200px;
     margin:auto;
-    padding:65px 20px;
+    padding:70px 20px;
 }
 
 .section-head{
     display:flex;
-    align-items:end;
     justify-content:space-between;
-    margin-bottom:25px;
+    align-items:end;
+    margin-bottom:30px;
 }
 
 .section-head h2{
-    font-size:32px;
+    font-family:Georgia, "Times New Roman", serif;
+    font-size:34px;
+    color:#241b18;
 }
 
 .section-head p{
-    color:#777;
     margin-top:7px;
+    color:#777;
+    font-size:14px;
 }
 
-/* ================= CATEGORIES ================= */
+
+/* =========================================================
+   CATEGORIES
+========================================================= */
 
 .categories{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:16px;
+    gap:18px;
 }
 
 .category{
-    height:170px;
-    border-radius:16px;
-    overflow:hidden;
+    height:190px;
     position:relative;
+    overflow:hidden;
+    border-radius:18px;
     cursor:pointer;
 }
 
@@ -193,33 +256,260 @@ section{
     width:100%;
     height:100%;
     object-fit:cover;
-    transition:.4s;
+    transition:.5s;
 }
 
 .category:hover img{
     transform:scale(1.08);
 }
 
-.category-title{
+.category::after{
+    content:"";
     position:absolute;
-    bottom:0;
-    left:0;
-    right:0;
-
-    padding:20px 15px;
-
-    color:white;
-    font-size:18px;
-    font-weight:bold;
+    inset:0;
 
     background:
     linear-gradient(
-    transparent,
-    rgba(0,0,0,.8)
+        transparent 30%,
+        rgba(0,0,0,.82)
     );
 }
 
-/* ================= PRODUCTS ================= */
+.category-title{
+    position:absolute;
+    z-index:2;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:22px 18px;
+
+    color:white;
+
+    font-family:Georgia, "Times New Roman", serif;
+    font-size:21px;
+}
+
+
+/* =========================================================
+   PREMIUM OFFERS
+========================================================= */
+
+.offers-section{
+    max-width:none;
+    padding:80px 20px;
+    background:#f7f3ee;
+}
+
+.offers-inner{
+    max-width:1200px;
+    margin:auto;
+}
+
+.offers-heading{
+    text-align:center;
+    margin-bottom:38px;
+}
+
+.offers-heading .eyebrow{
+    color:#9a7650;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:3px;
+}
+
+.offers-heading h2{
+    margin:10px 0;
+
+    font-family:Georgia, "Times New Roman", serif;
+
+    color:#241b18;
+    font-size:44px;
+}
+
+.offers-heading p{
+    color:#777;
+    font-size:14px;
+}
+
+
+/* MAIN OFFER */
+
+.main-offer{
+    min-height:350px;
+
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+
+    padding:55px;
+
+    border-radius:25px;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(35,20,22,.95),
+        rgba(35,20,22,.40)
+    ),
+    url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.main-offer-content{
+    max-width:550px;
+}
+
+.main-offer .label{
+    color:#e5c18c;
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.main-offer h3{
+    margin:12px 0;
+
+    font-family:Georgia, "Times New Roman", serif;
+
+    font-size:50px;
+    line-height:1.05;
+}
+
+.main-offer p{
+    max-width:500px;
+    margin-bottom:25px;
+
+    color:#eee;
+    line-height:1.7;
+}
+
+.offer-btn{
+    display:inline-block;
+
+    padding:12px 24px;
+
+    border:1px solid #e5c18c;
+    border-radius:30px;
+
+    color:white;
+
+    font-size:12px;
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.offer-btn:hover{
+    background:#e5c18c;
+    color:#241b18;
+}
+
+
+/* OFFER CARDS */
+
+.offer-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+
+    margin-top:20px;
+}
+
+.offer-card{
+    min-height:220px;
+
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    align-items:flex-end;
+
+    border-radius:18px;
+
+    color:white;
+
+    background-position:center;
+    background-size:cover;
+
+    transition:.35s;
+}
+
+.offer-card:hover{
+    transform:translateY(-5px);
+}
+
+.offer-card::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        transparent 15%,
+        rgba(20,12,12,.90)
+    );
+}
+
+.offer-card-content{
+    width:100%;
+
+    position:relative;
+    z-index:2;
+
+    padding:20px;
+}
+
+.offer-card small{
+    color:#e5c18c;
+    font-size:10px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.offer-card h4{
+    margin:6px 0;
+
+    font-family:Georgia, "Times New Roman", serif;
+
+    font-size:24px;
+}
+
+.offer-card span{
+    color:#eee;
+    font-size:12px;
+}
+
+.offer-saree{
+    background-image:
+    url("https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85");
+}
+
+.offer-men{
+    background-image:
+    url("https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=900&q=85");
+}
+
+.offer-kids{
+    background-image:
+    url("https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=85");
+}
+
+.offer-special{
+    background-image:
+    url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85");
+}
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
 
 .products{
     display:grid;
@@ -228,18 +518,28 @@ section{
 }
 
 .product{
-    background:white;
-    border-radius:16px;
+    position:relative;
     overflow:hidden;
 
-    box-shadow:
-    0 4px 18px rgba(0,0,0,.08);
+    background:white;
 
-    position:relative;
+    border-radius:17px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.07);
+
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.12);
 }
 
 .product-img{
-    height:250px;
+    height:260px;
     position:relative;
     overflow:hidden;
 }
@@ -257,40 +557,43 @@ section{
 
 .badge{
     position:absolute;
+    z-index:3;
+
     top:12px;
     left:12px;
-
-    background:#8b1e3f;
-    color:white;
 
     padding:6px 10px;
 
     border-radius:20px;
 
-    font-size:11px;
-    font-weight:bold;
+    background:#8b1e3f;
+    color:white;
 
-    z-index:2;
+    font-size:10px;
+    font-weight:bold;
+    letter-spacing:.5px;
 }
 
 .wishlist{
     position:absolute;
+    z-index:3;
+
     top:10px;
     right:10px;
 
-    width:36px;
-    height:36px;
+    width:38px;
+    height:38px;
 
+    border:0;
     border-radius:50%;
-    border:none;
 
     background:white;
 
-    font-size:19px;
+    font-size:20px;
 
     cursor:pointer;
 
-    z-index:2;
+    box-shadow:0 2px 10px rgba(0,0,0,.12);
 }
 
 .wishlist.active{
@@ -298,30 +601,30 @@ section{
 }
 
 .product-info{
-    padding:16px;
+    padding:17px;
 }
 
 .product-info h3{
-    font-size:17px;
-    margin-bottom:8px;
+    margin-bottom:7px;
+    font-size:16px;
 }
 
 .price{
-    font-weight:bold;
-    font-size:18px;
     color:#8b1e3f;
+    font-size:18px;
+    font-weight:bold;
 }
 
 .product-info p{
+    margin:7px 0 13px;
+
     color:#777;
+
     font-size:13px;
-    margin:7px 0 12px;
 }
 
 .enquire{
     display:block;
-
-    text-align:center;
 
     padding:10px;
 
@@ -331,46 +634,55 @@ section{
 
     color:#8b1e3f;
 
-    text-decoration:none;
+    text-align:center;
 
+    font-size:12px;
     font-weight:bold;
 
-    font-size:13px;
+    transition:.25s;
 }
 
-/* ================= OFFERS ================= */
-
-.offer{
-    max-width:1200px;
-    margin:20px auto;
-
-    padding:55px 30px;
-
-    border-radius:22px;
-
-    background:
-    linear-gradient(
-    90deg,
-    rgba(80,10,35,.95),
-    rgba(80,10,35,.6)
-    ),
-    url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1600&q=80")
-    center/cover;
-
+.enquire:hover{
+    background:#8b1e3f;
     color:white;
 }
 
-.offer h2{
-    font-size:38px;
-    margin-bottom:10px;
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-box{
+    max-width:550px;
+    margin:0 auto 30px;
 }
 
-.offer p{
-    color:#eee;
-    margin-bottom:20px;
+.search-box input{
+    width:100%;
+
+    padding:15px 20px;
+
+    border:1px solid #ddd;
+    border-radius:30px;
+
+    outline:none;
+
+    background:white;
+
+    font-size:14px;
+
+    box-shadow:
+    0 3px 12px rgba(0,0,0,.04);
 }
 
-/* ================= FEATURES ================= */
+.search-box input:focus{
+    border-color:#8b1e3f;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
 
 .features{
     display:grid;
@@ -379,25 +691,32 @@ section{
 }
 
 .feature{
+    padding:28px 20px;
+
     background:white;
 
-    padding:25px;
-
-    border-radius:15px;
+    border-radius:16px;
 
     text-align:center;
 
     box-shadow:
-    0 3px 15px rgba(0,0,0,.06);
+    0 4px 18px rgba(0,0,0,.06);
+
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-4px);
 }
 
 .feature-icon{
-    font-size:35px;
     margin-bottom:12px;
+    font-size:34px;
 }
 
 .feature h3{
-    margin-bottom:8px;
+    margin-bottom:7px;
+    font-size:17px;
 }
 
 .feature p{
@@ -406,44 +725,64 @@ section{
     line-height:1.6;
 }
 
-/* ================= ABOUT ================= */
+
+/* =========================================================
+   ABOUT
+========================================================= */
 
 .about{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:40px;
+    gap:45px;
     align-items:center;
 }
 
-.about-box{
-    background:#f5e8ed;
-
-    border-radius:20px;
-
-    padding:35px;
-}
-
 .about h2{
-    font-size:35px;
-    margin-bottom:15px;
+    margin-bottom:17px;
+
+    font-family:Georgia, "Times New Roman", serif;
+
+    font-size:38px;
+    color:#241b18;
 }
 
 .about p{
-    line-height:1.8;
     color:#666;
+    line-height:1.8;
 }
 
-/* ================= CONTACT ================= */
+.about-box{
+    padding:38px;
+
+    border-radius:22px;
+
+    background:#f5e8ed;
+}
+
+.about-box h3{
+    font-family:Georgia, "Times New Roman", serif;
+    font-size:25px;
+    color:#8b1e3f;
+}
+
+.about-box p{
+    color:#555;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
 
 .contact{
-    background:#fff;
+    padding:35px;
 
     border-radius:20px;
 
-    padding:35px;
+    background:white;
 
     box-shadow:
-    0 3px 15px rgba(0,0,0,.07);
+    0 4px 20px rgba(0,0,0,.07);
 }
 
 .contact-grid{
@@ -453,88 +792,80 @@ section{
 }
 
 .contact-item{
-    padding:20px;
-
-    background:#fafafa;
+    padding:22px;
 
     border-radius:12px;
+
+    background:#fafafa;
 }
 
 .contact-item strong{
     display:block;
     margin-bottom:8px;
+
+    color:#241b18;
 }
 
 .contact-item a{
     color:#8b1e3f;
-    text-decoration:none;
+    font-weight:600;
 }
 
-/* ================= SEARCH ================= */
 
-.search-box{
-    max-width:500px;
-    margin:0 auto 30px;
-}
-
-.search-box input{
-    width:100%;
-
-    padding:14px 18px;
-
-    border:1px solid #ddd;
-
-    border-radius:30px;
-
-    outline:none;
-
-    font-size:15px;
-}
-
-/* ================= FOOTER ================= */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
-    background:#151515;
+    padding:40px 20px;
+
+    background:#171313;
 
     color:#ddd;
-
-    padding:35px 20px;
 
     text-align:center;
 }
 
 footer h3{
+    margin-bottom:7px;
+
     color:white;
-    margin-bottom:8px;
+
+    font-family:Georgia, "Times New Roman", serif;
+    font-size:24px;
 }
 
 footer p{
     color:#999;
-    font-size:13px;
+    font-size:12px;
 }
 
-/* ================= MOBILE ================= */
 
-@media(max-width:800px){
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px){
 
     nav{
         display:none;
 
         position:absolute;
 
-        top:62px;
-
+        top:72px;
         left:0;
         right:0;
-
-        background:white;
 
         padding:20px;
 
         flex-direction:column;
+        align-items:flex-start;
+        gap:17px;
+
+        background:white;
 
         box-shadow:
-        0 5px 15px rgba(0,0,0,.1);
+        0 8px 20px rgba(0,0,0,.10);
     }
 
     nav.show{
@@ -546,11 +877,11 @@ footer p{
     }
 
     .hero{
-        min-height:560px;
+        min-height:570px;
     }
 
     .hero h1{
-        font-size:39px;
+        font-size:47px;
     }
 
     .categories{
@@ -559,11 +890,10 @@ footer p{
 
     .products{
         grid-template-columns:repeat(2,1fr);
-        gap:12px;
     }
 
-    .product-img{
-        height:210px;
+    .offer-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .features{
@@ -578,23 +908,70 @@ footer p{
         grid-template-columns:1fr;
     }
 
-    .section-head{
-        display:block;
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:500px){
+
+    .navbar{
+        min-height:64px;
+    }
+
+    nav{
+        top:64px;
+    }
+
+    .logo{
+        font-size:20px;
+    }
+
+    .hero{
+        min-height:560px;
+    }
+
+    .hero-content{
+        padding:50px 18px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    section{
+        padding:55px 15px;
     }
 
     .section-head h2{
-        font-size:27px;
+        font-size:28px;
     }
-}
 
-@media(max-width:450px){
+    .categories{
+        gap:10px;
+    }
+
+    .category{
+        height:145px;
+    }
+
+    .category-title{
+        padding:15px 12px;
+        font-size:17px;
+    }
 
     .products{
-        grid-template-columns:1fr 1fr;
+        gap:10px;
     }
 
     .product-img{
-        height:180px;
+        height:190px;
     }
 
     .product-info{
@@ -605,51 +982,137 @@ footer p{
         font-size:14px;
     }
 
-    .categories{
+    .price{
+        font-size:16px;
+    }
+
+    .offer-grid{
         gap:10px;
     }
 
-    .category{
-        height:140px;
+    .offer-card{
+        min-height:175px;
     }
 
-    .hero h1{
-        font-size:34px;
+    .offer-card-content{
+        padding:14px;
+    }
+
+    .offer-card h4{
+        font-size:18px;
+    }
+
+    .offers-section{
+        padding:55px 15px;
+    }
+
+    .offers-heading h2{
+        font-size:33px;
+    }
+
+    .main-offer{
+        min-height:390px;
+        padding:30px;
+    }
+
+    .main-offer h3{
+        font-size:38px;
     }
 
     .features{
-        grid-template-columns:1fr 1fr;
+        gap:10px;
     }
+
+    .feature{
+        padding:20px 12px;
+    }
+
+    .feature-icon{
+        font-size:28px;
+    }
+
+    .feature h3{
+        font-size:14px;
+    }
+
+    .feature p{
+        font-size:11px;
+    }
+
+    .about h2{
+        font-size:31px;
+    }
+
+    .contact{
+        padding:20px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media(max-width:360px){
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .product-img{
+        height:165px;
+    }
+
+    .wishlist{
+        width:33px;
+        height:33px;
+        font-size:17px;
+    }
+
+    .badge{
+        font-size:8px;
+        padding:5px 7px;
+    }
+
 }
 
 </style>
+
 </head>
+
 
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =======================================================
+     HEADER
+======================================================= -->
 
 <header>
 
 <div class="navbar">
 
+
 <div class="logo">
 
 Aaradhya Fashion
 
-<span>BONGARIYA BAZAR</span>
+<span>
+BONGARIYA BAZAR
+</span>
 
 </div>
 
 
-<div
+<button
 class="menu-btn"
-onclick="toggleMenu()">
+onclick="toggleMenu()"
+aria-label="Open Menu">
 
 ☰
 
-</div>
+</button>
 
 
 <nav id="nav">
@@ -684,13 +1147,16 @@ Contact
 
 </nav>
 
+
 </div>
 
 </header>
 
 
 
-<!-- ================= HERO ================= -->
+<!-- =======================================================
+     HERO
+======================================================= -->
 
 <div class="hero" id="home">
 
@@ -700,6 +1166,7 @@ Contact
 FASHION • STYLE • VALUE
 </small>
 
+
 <h1>
 
 Your Style.<br>
@@ -708,12 +1175,14 @@ Aaradhya Fashion.
 
 </h1>
 
+
 <p>
 
 Discover stylish fashion for Men, Women and Kids
 at Aaradhya Fashion, Bongariya Bazar, Azamgarh.
 
 </p>
+
 
 <div class="buttons">
 
@@ -736,15 +1205,19 @@ View Offers
 
 </div>
 
-</div>
 
 </div>
 
+</div>
 
 
-<!-- ================= CATEGORIES ================= -->
+
+<!-- =======================================================
+     CATEGORIES
+======================================================= -->
 
 <section id="categories">
+
 
 <div class="section-head">
 
@@ -766,46 +1239,241 @@ Find your favourite collection
 <div class="categories">
 
 
-<div class="category">
+<a
+href="#new"
+class="category">
 
-<img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=800&q=80">
+<img
+src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=900&q=85"
+alt="Women's Wear">
 
 <div class="category-title">
 Women's Wear
 </div>
 
-</div>
+</a>
 
 
-<div class="category">
+<a
+href="#trending"
+class="category">
 
-<img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=800&q=80">
+<img
+src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=900&q=85"
+alt="Men's Wear">
 
 <div class="category-title">
 Men's Wear
 </div>
 
-</div>
+</a>
 
 
-<div class="category">
+<a
+href="#new"
+class="category">
 
-<img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80">
+<img
+src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=85"
+alt="Kids Wear">
 
 <div class="category-title">
 Kids Wear
 </div>
 
-</div>
+</a>
 
 
-<div class="category">
+<a
+href="#new"
+class="category">
 
-<img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80">
+<img
+src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=900&q=85"
+alt="Saree and Kurti">
 
 <div class="category-title">
 Saree & Kurti
 </div>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =======================================================
+     PREMIUM SPECIAL OFFERS
+======================================================= -->
+
+<section
+id="offers"
+class="offers-section">
+
+
+<div class="offers-inner">
+
+
+<div class="offers-heading">
+
+<div class="eyebrow">
+AARADHYA FASHION
+</div>
+
+<h2>
+Exclusive Offers
+</h2>
+
+<p>
+Curated collections. Special prices. Your style.
+</p>
+
+</div>
+
+
+
+<!-- MAIN OFFER -->
+
+<div class="main-offer">
+
+
+<div class="main-offer-content">
+
+<div class="label">
+LIMITED COLLECTION
+</div>
+
+
+<h3>
+Festive Edit
+</h3>
+
+
+<p>
+
+Discover our specially selected fashion collections
+for every occasion.
+
+</p>
+
+
+<a
+href="#new"
+class="offer-btn">
+
+EXPLORE COLLECTION →
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+<!-- OFFER CARDS -->
+
+<div class="offer-grid">
+
+
+<a
+href="#new"
+class="offer-card offer-saree">
+
+<div class="offer-card-content">
+
+<small>
+WOMEN
+</small>
+
+<h4>
+Saree Edit
+</h4>
+
+<span>
+Explore Collection →
+</span>
+
+</div>
+
+</a>
+
+
+
+<a
+href="#trending"
+class="offer-card offer-men">
+
+<div class="offer-card-content">
+
+<small>
+MEN
+</small>
+
+<h4>
+Men's Collection
+</h4>
+
+<span>
+Explore Collection →
+</span>
+
+</div>
+
+</a>
+
+
+
+<a
+href="#new"
+class="offer-card offer-kids">
+
+<div class="offer-card-content">
+
+<small>
+KIDS
+</small>
+
+<h4>
+Kids Edit
+</h4>
+
+<span>
+Explore Collection →
+</span>
+
+</div>
+
+</a>
+
+
+
+<a
+href="#trending"
+class="offer-card offer-special">
+
+<div class="offer-card-content">
+
+<small>
+SPECIAL
+</small>
+
+<h4>
+Special Deals
+</h4>
+
+<span>
+Explore Offers →
+</span>
+
+</div>
+
+</a>
+
 
 </div>
 
@@ -816,9 +1484,12 @@ Saree & Kurti
 
 
 
-<!-- ================= NEW ARRIVALS ================= -->
+<!-- =======================================================
+     NEW ARRIVALS
+======================================================= -->
 
 <section id="new">
+
 
 <div class="section-head">
 
@@ -844,22 +1515,27 @@ Fresh styles added to our collection
 
 <div class="product">
 
+
 <div class="product-img">
 
 <span class="badge">
 NEW
 </span>
 
+
 <button
 class="wishlist"
-onclick="wishlist(this)">
+onclick="wishlist(this)"
+aria-label="Add to wishlist">
 
 ♡
 
 </button>
 
+
 <img
-src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80">
+src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85"
+alt="Premium Saree">
 
 </div>
 
@@ -878,9 +1554,10 @@ Premium Saree
 Elegant collection
 </p>
 
+
 <a
 class="enquire"
-href="https://wa.me/91XXXXXXXXXX">
+href="https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%20Premium%20Saree">
 
 WhatsApp Enquiry
 
@@ -896,22 +1573,27 @@ WhatsApp Enquiry
 
 <div class="product">
 
+
 <div class="product-img">
 
 <span class="badge">
 NEW
 </span>
 
+
 <button
 class="wishlist"
-onclick="wishlist(this)">
+onclick="wishlist(this)"
+aria-label="Add to wishlist">
 
 ♡
 
 </button>
 
+
 <img
-src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=800&q=80">
+src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=900&q=85"
+alt="Women's Kurti">
 
 </div>
 
@@ -930,9 +1612,10 @@ Women's Kurti
 Latest collection
 </p>
 
+
 <a
 class="enquire"
-href="https://wa.me/91XXXXXXXXXX">
+href="https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%20Women's%20Kurti">
 
 WhatsApp Enquiry
 
@@ -948,22 +1631,27 @@ WhatsApp Enquiry
 
 <div class="product">
 
+
 <div class="product-img">
 
 <span class="badge">
 NEW
 </span>
 
+
 <button
 class="wishlist"
-onclick="wishlist(this)">
+onclick="wishlist(this)"
+aria-label="Add to wishlist">
 
 ♡
 
 </button>
 
+
 <img
-src="https://images.unsplash.com/photo-1610652492500-ded3d6d9a7f3?auto=format&fit=crop&w=800&q=80">
+src="https://images.unsplash.com/photo-1610652492500-ded3d6d9a7f3?auto=format&fit=crop&w=900&q=85"
+alt="Men's Fashion">
 
 </div>
 
@@ -982,9 +1670,10 @@ Men's Fashion
 Premium style
 </p>
 
+
 <a
 class="enquire"
-href="https://wa.me/91XXXXXXXXXX">
+href="https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%20Men's%20Fashion">
 
 WhatsApp Enquiry
 
@@ -1000,22 +1689,27 @@ WhatsApp Enquiry
 
 <div class="product">
 
+
 <div class="product-img">
 
 <span class="badge">
 NEW
 </span>
 
+
 <button
 class="wishlist"
-onclick="wishlist(this)">
+onclick="wishlist(this)"
+aria-label="Add to wishlist">
 
 ♡
 
 </button>
 
+
 <img
-src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=800&q=80">
+src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=900&q=85"
+alt="Kids Collection">
 
 </div>
 
@@ -1034,9 +1728,10 @@ Kids Collection
 Kids combo collection
 </p>
 
+
 <a
 class="enquire"
-href="https://wa.me/91XXXXXXXXXX">
+href="https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%20Kids%20Collection">
 
 WhatsApp Enquiry
 
@@ -1053,37 +1748,12 @@ WhatsApp Enquiry
 
 
 
-<!-- ================= OFFERS ================= -->
-
-<section id="offers">
-
-<div class="offer">
-
-<h2>
-🔥 Special Offers
-</h2>
-
-<p>
-Discover exciting offers and selected fashion collections.
-</p>
-
-<a
-href="https://wa.me/91XXXXXXXXXX"
-class="btn btn-light">
-
-Ask Today's Offers
-
-</a>
-
-</div>
-
-</section>
-
-
-
-<!-- ================= TRENDING ================= -->
+<!-- =======================================================
+     TRENDING
+======================================================= -->
 
 <section id="trending">
+
 
 <div class="section-head">
 
@@ -1102,15 +1772,18 @@ Popular styles customers love
 </div>
 
 
+
 <div class="search-box">
 
 <input
 type="text"
 id="search"
 placeholder="🔎 Search products..."
-onkeyup="searchProducts()">
+onkeyup="searchProducts()"
+aria-label="Search products">
 
 </div>
+
 
 
 <div
@@ -1118,9 +1791,10 @@ class="products"
 id="productList">
 
 
-<!-- TRENDING PRODUCT 1 -->
+<!-- TRENDING 1 -->
 
 <div class="product">
+
 
 <div class="product-img">
 
@@ -1128,16 +1802,20 @@ id="productList">
 TRENDING
 </span>
 
+
 <button
 class="wishlist"
-onclick="wishlist(this)">
+onclick="wishlist(this)"
+aria-label="Add to wishlist">
 
 ♡
 
 </button>
 
+
 <img
-src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80">
+src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=900&q=85"
+alt="Fashion Collection">
 
 </div>
 
@@ -1156,9 +1834,10 @@ Fashion Collection
 Trending fashion
 </p>
 
+
 <a
 class="enquire"
-href="https://wa.me/91XXXXXXXXXX">
+href="https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%20Fashion%20Collection">
 
 WhatsApp Enquiry
 
@@ -1170,9 +1849,10 @@ WhatsApp Enquiry
 
 
 
-<!-- TRENDING PRODUCT 2 -->
+<!-- TRENDING 2 -->
 
 <div class="product">
+
 
 <div class="product-img">
 
@@ -1180,16 +1860,20 @@ WhatsApp Enquiry
 TRENDING
 </span>
 
+
 <button
 class="wishlist"
-onclick="wishlist(this)">
+onclick="wishlist(this)"
+aria-label="Add to wishlist">
 
 ♡
 
 </button>
 
+
 <img
-src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=800&q=80">
+src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=900&q=85"
+alt="Premium Kurti">
 
 </div>
 
@@ -1208,9 +1892,126 @@ Premium Kurti
 Latest design
 </p>
 
+
 <a
 class="enquire"
-href="https://wa.me/91XXXXXXXXXX">
+href="https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%20Premium%20Kurti">
+
+WhatsApp Enquiry
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- TRENDING 3 -->
+
+<div class="product">
+
+
+<div class="product-img">
+
+<span class="badge">
+TRENDING
+</span>
+
+
+<button
+class="wishlist"
+onclick="wishlist(this)"
+aria-label="Add to wishlist">
+
+♡
+
+</button>
+
+
+<img
+src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=900&q=85"
+alt="Men's Collection">
+
+</div>
+
+
+<div class="product-info">
+
+<h3>
+Men's Collection
+</h3>
+
+<div class="price">
+₹1,299
+</div>
+
+<p>
+Latest style
+</p>
+
+
+<a
+class="enquire"
+href="https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%20Men's%20Collection">
+
+WhatsApp Enquiry
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- TRENDING 4 -->
+
+<div class="product">
+
+
+<div class="product-img">
+
+<span class="badge">
+TRENDING
+</span>
+
+
+<button
+class="wishlist"
+onclick="wishlist(this)"
+aria-label="Add to wishlist">
+
+♡
+
+</button>
+
+
+<img
+src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
+alt="Footwear">
+
+</div>
+
+
+<div class="product-info">
+
+<h3>
+Fashion Footwear
+</h3>
+
+<div class="price">
+₹799
+</div>
+
+<p>
+Latest collection
+</p>
+
+
+<a
+class="enquire"
+href="https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%20Fashion%20Footwear">
 
 WhatsApp Enquiry
 
@@ -1227,9 +2028,12 @@ WhatsApp Enquiry
 
 
 
-<!-- ================= FEATURES ================= -->
+<!-- =======================================================
+     WHY AARADHYA FASHION
+======================================================= -->
 
 <section>
+
 
 <div class="section-head">
 
@@ -1268,6 +2072,7 @@ Regularly updated fashion collections.
 </div>
 
 
+
 <div class="feature">
 
 <div class="feature-icon">
@@ -1285,6 +2090,7 @@ Fashion at attractive prices.
 </div>
 
 
+
 <div class="feature">
 
 <div class="feature-icon">
@@ -1300,6 +2106,7 @@ Friendly service and easy enquiry.
 </p>
 
 </div>
+
 
 
 <div class="feature">
@@ -1325,9 +2132,12 @@ Visit us at Bongariya Bazar.
 
 
 
-<!-- ================= ABOUT ================= -->
+<!-- =======================================================
+     ABOUT
+======================================================= -->
 
 <section id="about">
+
 
 <div class="about">
 
@@ -1338,6 +2148,7 @@ Visit us at Bongariya Bazar.
 About Aaradhya Fashion
 </h2>
 
+
 <p>
 
 Aaradhya Fashion is a local fashion store at
@@ -1346,7 +2157,9 @@ for Men, Women and Kids.
 
 </p>
 
+
 <br>
+
 
 <p>
 
@@ -1355,7 +2168,9 @@ and a convenient shopping experience.
 
 </p>
 
+
 <br>
+
 
 <a
 href="#contact"
@@ -1365,16 +2180,21 @@ Visit / Contact Us
 
 </a>
 
+
 </div>
 
 
+
 <div class="about-box">
+
 
 <h3>
 📍 Our Store
 </h3>
 
+
 <br>
+
 
 <p>
 
@@ -1384,14 +2204,17 @@ Aaradhya Fashion
 
 <br>
 
-Bongariya Bazar, Azamgarh,
+Bongariya Bazar, Azamgarh
+
 <br>
 
 Uttar Pradesh, India
 
 </p>
 
+
 <br>
+
 
 <p>
 
@@ -1406,6 +2229,7 @@ Winter • Footwear • Bags
 
 </p>
 
+
 </div>
 
 
@@ -1415,9 +2239,12 @@ Winter • Footwear • Bags
 
 
 
-<!-- ================= CONTACT ================= -->
+<!-- =======================================================
+     CONTACT
+======================================================= -->
 
 <section id="contact">
+
 
 <div class="section-head">
 
@@ -1434,6 +2261,7 @@ We are happy to help you
 </div>
 
 </div>
+
 
 
 <div class="contact">
@@ -1455,6 +2283,7 @@ Uttar Pradesh
 </div>
 
 
+
 <div class="contact-item">
 
 <strong>
@@ -1468,6 +2297,7 @@ Uttar Pradesh
 </a>
 
 </div>
+
 
 
 <div class="contact-item">
@@ -1510,7 +2340,9 @@ class="btn btn-primary">
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =======================================================
+     FOOTER
+======================================================= -->
 
 <footer>
 
@@ -1532,21 +2364,29 @@ Fashion • Style • Value
 
 
 
+<!-- =======================================================
+     JAVASCRIPT
+======================================================= -->
+
 <script>
 
-/* MOBILE MENU */
+/* =========================================================
+   MOBILE MENU
+========================================================= */
 
 function toggleMenu(){
 
-    document
-    .getElementById("nav")
-    .classList
-    .toggle("show");
+    const nav =
+    document.getElementById("nav");
+
+    nav.classList.toggle("show");
 
 }
 
 
-/* WISHLIST */
+/* =========================================================
+   WISHLIST
+========================================================= */
 
 function wishlist(button){
 
@@ -1554,38 +2394,41 @@ function wishlist(button){
 
     if(button.classList.contains("active")){
 
-        button.innerHTML="♥";
+        button.innerHTML = "♥";
 
     }else{
 
-        button.innerHTML="♡";
+        button.innerHTML = "♡";
 
     }
 
 }
 
 
-/* PRODUCT SEARCH */
+/* =========================================================
+   PRODUCT SEARCH
+========================================================= */
 
 function searchProducts(){
 
-    let input =
+    const input =
     document
     .getElementById("search")
     .value
-    .toLowerCase();
+    .toLowerCase()
+    .trim();
 
 
-    let products =
+    const products =
     document
     .querySelectorAll(
-    "#productList .product"
+        "#productList .product"
     );
 
 
     products.forEach(function(product){
 
-        let text =
+        const text =
         product
         .innerText
         .toLowerCase();
@@ -1593,11 +2436,11 @@ function searchProducts(){
 
         if(text.includes(input)){
 
-            product.style.display="";
+            product.style.display = "";
 
         }else{
 
-            product.style.display="none";
+            product.style.display = "none";
 
         }
 
@@ -1605,7 +2448,28 @@ function searchProducts(){
 
 }
 
+
+/* =========================================================
+   CLOSE MOBILE MENU AFTER CLICK
+========================================================= */
+
+document
+.querySelectorAll("#nav a")
+.forEach(function(link){
+
+    link.addEventListener("click", function(){
+
+        document
+        .getElementById("nav")
+        .classList
+        .remove("show");
+
+    });
+
+});
+
 </script>
+
 
 </body>
 </html>
