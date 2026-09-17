@@ -1,61 +1,154 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aaradhya Fashion | Bongariya Bazar</title>
-<style>
-:root{--wine:#64111e;--gold:#b8893c;--cream:#f8f2e8;--paper:#fffaf3;--ink:#2d211c;--border:#e5d6c0}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{font-family:Georgia,"Times New Roman",serif;background:var(--paper);color:var(--ink)}
-a{text-decoration:none;color:inherit}.top{background:var(--wine);color:#fff7ed;padding:7px 5%;font:12px Arial;display:flex;justify-content:space-between}
-.nav{height:105px;background:#fffaf4;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 4%;position:sticky;top:0;z-index:20}
-.logo{text-align:center;line-height:1}.logo b{display:block;font-size:29px;font-weight:500;letter-spacing:1px}.logo small{display:block;color:var(--gold);letter-spacing:5px;font:10px Arial;margin-top:7px}.logo em{display:block;font-size:10px;letter-spacing:2px;margin-top:6px;color:#806b59}
-.menu{display:flex;gap:27px;font-size:15px}.menu a:hover{color:var(--wine)}
-.icons{display:flex;gap:17px;font:22px Arial}.icons button{background:none;border:0;cursor:pointer}.cart{position:relative}.count{position:absolute;right:-9px;top:-8px;background:var(--wine);color:#fff;border-radius:50%;width:18px;height:18px;font:11px Arial;display:grid;place-items:center}
-.hero{min-height:470px;display:flex;align-items:center;padding:60px 8%;background:linear-gradient(90deg,#f8f2e8 0%,rgba(248,242,232,.9) 35%,rgba(248,242,232,.12) 65%),url("https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1800&q=85") center/cover}
-.hero .copy{max-width:560px}.kicker{font-size:16px;letter-spacing:4px;color:#b08a62}.hero h1{font-size:68px;font-weight:400;line-height:1;margin:16px 0 10px}.hero h2{font-size:27px;font-weight:400}.hero p{font-size:18px;margin:17px 0 27px}.btn{display:inline-block;background:var(--wine);color:#fff;padding:14px 28px;letter-spacing:.4px}
-.section{padding:42px 4%}.title{text-align:center;margin-bottom:28px}.title h2{font-size:28px;font-weight:400;letter-spacing:1px}.orn{color:var(--gold);font-size:21px;margin-top:4px}
-.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1250px;margin:auto}.cat{height:160px;position:relative;overflow:hidden;border:1px solid var(--border)}.cat img{width:100%;height:100%;object-fit:cover;transition:.4s}.cat:hover img{transform:scale(1.05)}.cat:after{content:"";position:absolute;inset:0;background:rgba(255,248,238,.15)}.cat div{position:absolute;inset:0;z-index:2;display:grid;place-content:center;text-align:center}.cat h3{font-size:22px;font-weight:400}.cat span{font:12px Arial;margin-top:5px}
-.products{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;max-width:1250px;margin:auto}.product{background:#fff;border:1px solid var(--border)}.pic{height:270px;position:relative;overflow:hidden}.pic img{width:100%;height:100%;object-fit:cover;transition:.4s}.product:hover img{transform:scale(1.04)}.badge{position:absolute;left:9px;top:9px;background:#d8b46b;padding:5px 9px;font:11px Arial}.wish{position:absolute;right:9px;top:8px;border:0;border-radius:50%;background:#fff;color:#2d211c;width:34px;height:34px;font-size:19px;z-index:2}.wish.active{color:var(--wine)}.info{padding:11px 12px 14px}.name{font-size:15px;margin-bottom:7px}.price{font:bold 17px Arial}.rating{font:12px Arial;color:#9a6d26;margin-top:6px}.buy{float:right;margin-top:-25px;width:36px;height:36px;background:var(--wine);color:#fff;border:0}
-.offer{background:var(--wine);color:#f8dfaa;min-height:125px;display:flex;align-items:center;justify-content:center;gap:65px;padding:20px}.offer h2{font-size:38px;font-weight:400}.offer p{font-size:18px}.offer .btn{background:#e3c37c;color:#301b18}.circle{border:1px solid #d7b56d;border-radius:50%;width:115px;height:115px;display:grid;place-content:center;text-align:center;font-size:15px;line-height:1.1}.circle b{font-size:29px;font-weight:400}
-.features{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;max-width:1200px;margin:auto;text-align:center}.fi{font-size:32px;color:#9b6d2e}.feature h3{font-size:15px;font-weight:400}.feature p{font:12px Arial;color:#75685f}
-.news{background:#f3eadc;padding:38px 5%;display:flex;align-items:center;justify-content:space-between;gap:30px;border-top:1px solid var(--border)}.news h2{font-size:26px;font-weight:400}.news p{font-size:14px;color:#75685f}.form{display:flex;border:1px solid #cbbda9;background:#fff}.form input{border:0;outline:0;padding:12px 14px;min-width:250px}.form button{border:0;background:var(--wine);color:#fff;padding:0 18px}
-footer{background:#fffaf4;padding:27px 5%;display:flex;justify-content:space-between;font:12px Arial;color:#695b51;border-top:1px solid var(--border)}
-@media(max-width:900px){.menu{display:none}.nav{height:82px}.hero{min-height:530px;padding:45px 7%;align-items:flex-end}.hero h1{font-size:52px}.cats{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(2,1fr)}.offer{gap:20px}.news{flex-direction:column;align-items:flex-start}}
-@media(max-width:560px){.top span:last-child{display:none}.logo b{font-size:22px}.logo small{font-size:8px}.icons{gap:9px}.hero{min-height:560px;padding:35px 6%;background-position:62% center}.hero h1{font-size:46px}.hero h2{font-size:20px}.hero p{font-size:15px}.section{padding:35px 4%}.cats{gap:9px}.cat{height:140px}.cat h3{font-size:18px}.products{gap:9px}.pic{height:220px}.name{font-size:13px}.price{font-size:15px}.offer{justify-content:space-between;gap:10px}.offer h2{font-size:22px}.offer p{font-size:13px}.circle{width:90px;height:90px;flex:none;font-size:11px}.circle b{font-size:23px}.form{width:100%}.form input{min-width:0;flex:1;width:50%}footer{flex-direction:column;gap:12px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aaradhya Fashion | Bongariya Bazar</title>
+  <meta name="description" content="Aaradhya Fashion – elegant fashion for women, men and kids.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="top"><span>Free Shipping on Orders Above ₹999 &nbsp; | &nbsp; Easy Returns &nbsp; | &nbsp; Shop with Confidence</span><span>🚚 Track Order &nbsp; | &nbsp; ⓘ Help</span></div>
-<header class="nav">
-<a class="logo" href="#home"><b>♧ AARADHYA</b><small>FASHION</small><em>STYLE FOR EVERY YOU</em></a>
-<nav class="menu"><a href="#home">Home</a><a href="#categories">Women</a><a href="#categories">Men</a><a href="#categories">Kids</a><a href="#categories">Sarees</a><a href="#new">New Arrivals</a><a href="#offers">Offers</a></nav>
-<div class="icons"><button>⌕</button><button>♙</button><button>♡</button><button class="cart">🛍<i class="count" id="count">0</i></button></div>
-</header>
-<main id="home">
-<section class="hero"><div class="copy"><div class="kicker">TIMELESS TRADITION · MODERN ELEGANCE</div><h1>SAREES</h1><h2>THAT TELL YOUR STORY</h2><p>Grace · Tradition · Everyday Elegance</p><a class="btn" href="#new">SHOP SAREES →</a></div></section>
-<section class="section" id="categories"><div class="title"><h2>SHOP BY CATEGORY</h2><div class="orn">— ❖ —</div></div><div class="cats">
-<a class="cat" href="#new"><img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80"><div><h3>WOMEN</h3><span>Elegance for Every Occasion<br>SHOP NOW →</span></div></a>
-<a class="cat" href="#new"><img src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=800&q=80"><div><h3>MEN</h3><span>Style for Every Story<br>SHOP NOW →</span></div></a>
-<a class="cat" href="#new"><img src="https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?auto=format&fit=crop&w=800&q=80"><div><h3>KIDS</h3><span>Fashion for Little Moments<br>SHOP NOW →</span></div></a>
-<a class="cat" href="#new"><img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=800&q=80"><div><h3>SAREES</h3><span>Tradition in Every Drape<br>SHOP NOW →</span></div></a>
-</div></section>
-<section class="section" id="new"><div class="title"><h2>NEW ARRIVALS</h2><div class="orn">— ❖ —</div></div><div class="products">
-<script>
-const products=[
-["Silk Blend Saree","₹1,599","https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=80"],
-["Floral Anarkali Suit","₹1,299","https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=80"],
-["Premium Casual Shirt","₹999","https://images.unsplash.com/photo-1610652492500-ded49ceeb378?auto=format&fit=crop&w=700&q=80"],
-["Kids Party Wear","₹1,199","https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?auto=format&fit=crop&w=700&q=80"],
-["Designer Saree","₹1,899","https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=700&q=80"]];
-document.write(products.map(p=>`<article class="product"><div class="pic"><span class="badge">NEW</span><button class="wish" onclick="this.classList.toggle('active');this.textContent=this.classList.contains('active')?'♥':'♡'">♡</button><img src="${p[2]}" alt="${p[0]}"></div><div class="info"><div class="name">${p[0]}</div><div class="price">${p[1]}</div><div class="rating">★ 4.8 (120)</div><button class="buy" onclick="addCart()">🛒</button></div></article>`).join(""));
-function addCart(){let n=+document.getElementById("count").textContent+1;document.getElementById("count").textContent=n}
-</script></div></section>
-<section class="offer" id="offers"><div><h2>SPECIAL OFFERS</h2><p>Great Styles. Better Prices.</p></div><a class="btn" href="#new">EXPLORE OFFERS →</a><div class="circle">UP TO<br><b>50%</b><br>OFF</div></section>
-<section class="section"><div class="title"><h2>WHY CHOOSE AARADHYA FASHION</h2><div class="orn">— ❖ —</div></div><div class="features">
-<div class="feature"><div class="fi">◇</div><h3>Latest Styles</h3><p>Always in Trend</p></div><div class="feature"><div class="fi">♧</div><h3>Fast & Reliable</h3><p>Delivery</p></div><div class="feature"><div class="fi">♢</div><h3>Secure Shopping</h3><p>100% Safe</p></div><div class="feature"><div class="fi">♧</div><h3>Customer First</h3><p>Always Here for You</p></div>
-</div></section>
-<section class="news"><div><h2>FASHION A BRIGHTER YOU</h2><p>Join our style circle for new arrivals and offers.</p></div><form class="form" onsubmit="event.preventDefault();alert('Thank you for joining Aaradhya Fashion!')"><input type="email" placeholder="Your email address" required><button>Subscribe</button></form><div>◎ &nbsp; f &nbsp; ▶ &nbsp; p</div></section>
-</main>
-<footer><span>© 2026 Aaradhya Fashion · Bongariya Bazar, Azamgarh</span><span>Style for Every You</span></footer>
-</body></html>
+
+  <div class="announcement">
+    <span>Free Shipping on Orders Above ₹999</span>
+    <span>Easy Returns &nbsp; • &nbsp; Shop with Confidence</span>
+  </div>
+
+  <header class="header">
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu">☰</button>
+
+    <a class="brand" href="#home">
+      <span class="brand-symbol">✦</span>
+      <strong>AARADHYA</strong>
+      <small>FASHION</small>
+      <em>STYLE FOR EVERY YOU</em>
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="#home">Home</a>
+      <a href="#categories">Women</a>
+      <a href="#categories">Men</a>
+      <a href="#categories">Kids</a>
+      <a href="#categories">Sarees</a>
+      <a href="#new-arrivals">New Arrivals</a>
+      <a href="#offers">Offers</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="searchBtn" aria-label="Search">⌕</button>
+      <button aria-label="Account">♙</button>
+      <button id="wishlistBtn" aria-label="Wishlist">♡</button>
+      <button class="cart-button" id="cartBtn" aria-label="Cart">🛍<b id="cartCount">0</b></button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#home">Home</a>
+    <a href="#categories">Women</a>
+    <a href="#categories">Men</a>
+    <a href="#categories">Kids</a>
+    <a href="#categories">Sarees</a>
+    <a href="#new-arrivals">New Arrivals</a>
+    <a href="#offers">Offers</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="eyebrow">TIMELESS TRADITION • MODERN ELEGANCE</p>
+      <h1>SAREES</h1>
+      <h2>THAT TELL YOUR STORY</h2>
+      <p class="hero-text">Grace • Tradition • Everyday Elegance</p>
+      <a class="primary-btn" href="#new-arrivals">SHOP SAREES <span>→</span></a>
+    </div>
+  </section>
+
+  <section class="section" id="categories">
+    <div class="section-heading">
+      <p class="eyebrow">CURATED COLLECTIONS</p>
+      <h2>SHOP BY CATEGORY</h2>
+      <div class="ornament">— ❖ —</div>
+    </div>
+    <div class="category-grid" id="categoryGrid"></div>
+  </section>
+
+  <section class="section arrivals" id="new-arrivals">
+    <div class="section-heading">
+      <p class="eyebrow">JUST IN</p>
+      <h2>NEW ARRIVALS</h2>
+      <div class="ornament">— ❖ —</div>
+    </div>
+
+    <div class="toolbar">
+      <div class="search-box">
+        <span>⌕</span>
+        <input id="productSearch" type="search" placeholder="Search products...">
+      </div>
+      <select id="categoryFilter">
+        <option value="All">All Categories</option>
+        <option value="Women">Women</option>
+        <option value="Men">Men</option>
+        <option value="Kids">Kids</option>
+        <option value="Sarees">Sarees</option>
+      </select>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+    <p class="no-results" id="noResults">No products found.</p>
+  </section>
+
+  <section class="offer-banner" id="offers">
+    <div class="offer-copy">
+      <p class="eyebrow">A LITTLE SOMETHING SPECIAL</p>
+      <h2>SPECIAL OFFERS</h2>
+      <p>Great Styles. Better Prices.</p>
+    </div>
+    <a class="gold-btn" href="#new-arrivals">EXPLORE OFFERS →</a>
+    <div class="offer-circle">UP TO<br><strong>50%</strong><br>OFF</div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">THE AARADHYA PROMISE</p>
+      <h2>WHY CHOOSE US</h2>
+      <div class="ornament">— ❖ —</div>
+    </div>
+    <div class="features">
+      <div class="feature"><span>◇</span><h3>Latest Styles</h3><p>Fresh looks, always in trend.</p></div>
+      <div class="feature"><span>♧</span><h3>Best Value</h3><p>Beautiful fashion at fair prices.</p></div>
+      <div class="feature"><span>♢</span><h3>Easy Shopping</h3><p>Simple enquiry and quick support.</p></div>
+      <div class="feature"><span>✦</span><h3>Customer First</h3><p>Friendly service for every customer.</p></div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div>
+      <p class="eyebrow">JOIN OUR STYLE CIRCLE</p>
+      <h2>FASHION A BRIGHTER YOU</h2>
+      <p>Get new arrivals and special offers in your inbox.</p>
+    </div>
+    <form id="newsletterForm">
+      <input id="emailInput" type="email" placeholder="Your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="socials">
+      <a href="#" aria-label="Instagram">◎</a>
+      <a href="#" aria-label="Facebook">f</a>
+      <a href="#" aria-label="YouTube">▶</a>
+      <a href="#" aria-label="Pinterest">p</a>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <strong>AARADHYA FASHION</strong>
+      <p>Bongariya Bazar, Azamgarh, Uttar Pradesh</p>
+    </div>
+    <div>© 2026 Aaradhya Fashion. All rights reserved.</div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="data/products.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
