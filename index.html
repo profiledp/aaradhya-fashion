@@ -10,6 +10,7 @@
 content="Aaradhya Fashion – Men's Wear, Women's Wear, Kids Wear, Sarees, Kurtis, Winter Collection, Footwear, Bags and more.">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -26,7 +27,8 @@ body{
     color:#222;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 header{
     position:sticky;
     top:0;
@@ -79,15 +81,21 @@ nav a:hover{
     cursor:pointer;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero{
     min-height:500px;
+
     display:flex;
     align-items:center;
+
     background:
-    linear-gradient(90deg,rgba(20,10,15,.85),rgba(20,10,15,.35)),
+    linear-gradient(90deg,
+    rgba(20,10,15,.85),
+    rgba(20,10,15,.35)),
     url("https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1600&q=80")
     center/cover;
+
     color:white;
 }
 
@@ -141,7 +149,8 @@ nav a:hover{
     color:#222;
 }
 
-/* SECTION */
+/* ================= SECTION ================= */
+
 section{
     max-width:1200px;
     margin:auto;
@@ -164,7 +173,8 @@ section{
     margin-top:7px;
 }
 
-/* CATEGORY */
+/* ================= CATEGORIES ================= */
+
 .categories{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -195,14 +205,22 @@ section{
     bottom:0;
     left:0;
     right:0;
+
     padding:20px 15px;
+
     color:white;
     font-size:18px;
     font-weight:bold;
-    background:linear-gradient(transparent,rgba(0,0,0,.8));
+
+    background:
+    linear-gradient(
+    transparent,
+    rgba(0,0,0,.8)
+    );
 }
 
-/* PRODUCTS */
+/* ================= PRODUCTS ================= */
+
 .products{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -213,7 +231,10 @@ section{
     background:white;
     border-radius:16px;
     overflow:hidden;
-    box-shadow:0 4px 18px rgba(0,0,0,.08);
+
+    box-shadow:
+    0 4px 18px rgba(0,0,0,.08);
+
     position:relative;
 }
 
@@ -238,25 +259,38 @@ section{
     position:absolute;
     top:12px;
     left:12px;
+
     background:#8b1e3f;
     color:white;
+
     padding:6px 10px;
+
     border-radius:20px;
+
     font-size:11px;
     font-weight:bold;
+
+    z-index:2;
 }
 
 .wishlist{
     position:absolute;
     top:10px;
     right:10px;
+
     width:36px;
     height:36px;
+
     border-radius:50%;
     border:none;
+
     background:white;
+
     font-size:19px;
+
     cursor:pointer;
+
+    z-index:2;
 }
 
 .wishlist.active{
@@ -286,26 +320,43 @@ section{
 
 .enquire{
     display:block;
+
     text-align:center;
+
     padding:10px;
+
     border-radius:8px;
+
     background:#f5e8ed;
+
     color:#8b1e3f;
+
     text-decoration:none;
+
     font-weight:bold;
+
     font-size:13px;
 }
 
-/* OFFER */
+/* ================= OFFERS ================= */
+
 .offer{
     max-width:1200px;
     margin:20px auto;
+
     padding:55px 30px;
+
     border-radius:22px;
+
     background:
-    linear-gradient(90deg,rgba(80,10,35,.95),rgba(80,10,35,.6)),
+    linear-gradient(
+    90deg,
+    rgba(80,10,35,.95),
+    rgba(80,10,35,.6)
+    ),
     url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1600&q=80")
     center/cover;
+
     color:white;
 }
 
@@ -319,7 +370,8 @@ section{
     margin-bottom:20px;
 }
 
-/* FEATURES */
+/* ================= FEATURES ================= */
+
 .features{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -328,10 +380,15 @@ section{
 
 .feature{
     background:white;
+
     padding:25px;
+
     border-radius:15px;
+
     text-align:center;
-    box-shadow:0 3px 15px rgba(0,0,0,.06);
+
+    box-shadow:
+    0 3px 15px rgba(0,0,0,.06);
 }
 
 .feature-icon{
@@ -349,50 +406,8 @@ section{
     line-height:1.6;
 }
 
-/* A PRINT */
-.print-section{
-    background:#181818;
-    color:white;
-    max-width:none;
-}
+/* ================= ABOUT ================= */
 
-.print-inner{
-    max-width:1200px;
-    margin:auto;
-    padding:60px 20px;
-}
-
-.print-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:35px;
-    align-items:center;
-}
-
-.print-grid h2{
-    font-size:38px;
-    margin-bottom:15px;
-}
-
-.print-grid p{
-    color:#ccc;
-    line-height:1.7;
-}
-
-.print-list{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-    margin-top:20px;
-}
-
-.print-item{
-    padding:13px;
-    background:#292929;
-    border-radius:8px;
-}
-
-/* ABOUT */
 .about{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -402,7 +417,9 @@ section{
 
 .about-box{
     background:#f5e8ed;
+
     border-radius:20px;
+
     padding:35px;
 }
 
@@ -416,12 +433,17 @@ section{
     color:#666;
 }
 
-/* CONTACT */
+/* ================= CONTACT ================= */
+
 .contact{
     background:#fff;
+
     border-radius:20px;
+
     padding:35px;
-    box-shadow:0 3px 15px rgba(0,0,0,.07);
+
+    box-shadow:
+    0 3px 15px rgba(0,0,0,.07);
 }
 
 .contact-grid{
@@ -432,7 +454,9 @@ section{
 
 .contact-item{
     padding:20px;
+
     background:#fafafa;
+
     border-radius:12px;
 }
 
@@ -441,11 +465,41 @@ section{
     margin-bottom:8px;
 }
 
-/* FOOTER */
+.contact-item a{
+    color:#8b1e3f;
+    text-decoration:none;
+}
+
+/* ================= SEARCH ================= */
+
+.search-box{
+    max-width:500px;
+    margin:0 auto 30px;
+}
+
+.search-box input{
+    width:100%;
+
+    padding:14px 18px;
+
+    border:1px solid #ddd;
+
+    border-radius:30px;
+
+    outline:none;
+
+    font-size:15px;
+}
+
+/* ================= FOOTER ================= */
+
 footer{
     background:#151515;
+
     color:#ddd;
+
     padding:35px 20px;
+
     text-align:center;
 }
 
@@ -459,34 +513,28 @@ footer p{
     font-size:13px;
 }
 
-/* SEARCH */
-.search-box{
-    max-width:500px;
-    margin:0 auto 30px;
-}
+/* ================= MOBILE ================= */
 
-.search-box input{
-    width:100%;
-    padding:14px 18px;
-    border:1px solid #ddd;
-    border-radius:30px;
-    outline:none;
-    font-size:15px;
-}
-
-/* MOBILE */
 @media(max-width:800px){
 
     nav{
         display:none;
+
         position:absolute;
+
         top:62px;
+
         left:0;
         right:0;
+
         background:white;
+
         padding:20px;
+
         flex-direction:column;
-        box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+        box-shadow:
+        0 5px 15px rgba(0,0,0,.1);
     }
 
     nav.show{
@@ -522,8 +570,7 @@ footer p{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .about,
-    .print-grid{
+    .about{
         grid-template-columns:1fr;
     }
 
@@ -574,31 +621,67 @@ footer p{
         grid-template-columns:1fr 1fr;
     }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+
+<!-- ================= HEADER ================= -->
+
 <header>
 
 <div class="navbar">
 
 <div class="logo">
+
 Aaradhya Fashion
+
 <span>BONGARIYA BAZAR</span>
+
 </div>
 
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div
+class="menu-btn"
+onclick="toggleMenu()">
+
+☰
+
+</div>
+
 
 <nav id="nav">
-<a href="#home">Home</a>
-<a href="#categories">Categories</a>
-<a href="#new">New Arrivals</a>
-<a href="#trending">Trending</a>
-<a href="#offers">Offers</a>
-<a href="#print">A-Print</a>
-<a href="#contact">Contact</a>
+
+<a href="#home">
+Home
+</a>
+
+<a href="#categories">
+Categories
+</a>
+
+<a href="#new">
+New Arrivals
+</a>
+
+<a href="#trending">
+Trending
+</a>
+
+<a href="#offers">
+Offers
+</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
 </nav>
 
 </div>
@@ -606,32 +689,49 @@ Aaradhya Fashion
 </header>
 
 
-<!-- HERO -->
+
+<!-- ================= HERO ================= -->
+
 <div class="hero" id="home">
 
 <div class="hero-content">
 
-<small>FASHION • STYLE • VALUE</small>
+<small>
+FASHION • STYLE • VALUE
+</small>
 
 <h1>
+
 Your Style.<br>
 Your Choice.<br>
 Aaradhya Fashion.
+
 </h1>
 
 <p>
+
 Discover stylish fashion for Men, Women and Kids
 at Aaradhya Fashion, Bongariya Bazar, Azamgarh.
+
 </p>
 
 <div class="buttons">
 
-<a href="#categories" class="btn btn-primary">
+<a
+href="#categories"
+class="btn btn-primary">
+
 Shop Collection
+
 </a>
 
-<a href="#offers" class="btn btn-light">
+
+<a
+href="#offers"
+class="btn btn-light">
+
 View Offers
+
 </a>
 
 </div>
@@ -641,80 +741,149 @@ View Offers
 </div>
 
 
-<!-- CATEGORIES -->
+
+<!-- ================= CATEGORIES ================= -->
+
 <section id="categories">
 
 <div class="section-head">
+
 <div>
-<h2>Shop by Category</h2>
-<p>Find your favourite collection</p>
+
+<h2>
+Shop by Category
+</h2>
+
+<p>
+Find your favourite collection
+</p>
+
 </div>
+
 </div>
+
 
 <div class="categories">
 
+
 <div class="category">
+
 <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=800&q=80">
-<div class="category-title">Women's Wear</div>
+
+<div class="category-title">
+Women's Wear
 </div>
 
+</div>
+
+
 <div class="category">
+
 <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=800&q=80">
-<div class="category-title">Men's Wear</div>
+
+<div class="category-title">
+Men's Wear
 </div>
 
+</div>
+
+
 <div class="category">
+
 <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80">
-<div class="category-title">Kids Wear</div>
+
+<div class="category-title">
+Kids Wear
 </div>
 
-<div class="category">
-<img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80">
-<div class="category-title">Saree & Kurti</div>
 </div>
+
+
+<div class="category">
+
+<img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=80">
+
+<div class="category-title">
+Saree & Kurti
+</div>
+
+</div>
+
 
 </div>
 
 </section>
 
 
-<!-- NEW ARRIVALS -->
+
+<!-- ================= NEW ARRIVALS ================= -->
+
 <section id="new">
 
 <div class="section-head">
+
 <div>
-<h2>✨ New Arrivals</h2>
-<p>Fresh styles added to our collection</p>
+
+<h2>
+✨ New Arrivals
+</h2>
+
+<p>
+Fresh styles added to our collection
+</p>
+
 </div>
+
 </div>
+
 
 <div class="products">
 
+
+<!-- PRODUCT 1 -->
+
 <div class="product">
 
 <div class="product-img">
 
-<span class="badge">NEW</span>
+<span class="badge">
+NEW
+</span>
 
-<button class="wishlist" onclick="wishlist(this)">
+<button
+class="wishlist"
+onclick="wishlist(this)">
+
 ♡
+
 </button>
 
-<img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80">
+<img
+src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80">
 
 </div>
 
+
 <div class="product-info">
 
-<h3>Premium Saree</h3>
+<h3>
+Premium Saree
+</h3>
 
-<div class="price">₹1,599</div>
+<div class="price">
+₹1,599
+</div>
 
-<p>Elegant collection</p>
+<p>
+Elegant collection
+</p>
 
-<a class="enquire"
-href="https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%20Premium%20Saree">
+<a
+class="enquire"
+href="https://wa.me/91XXXXXXXXXX">
+
 WhatsApp Enquiry
+
 </a>
 
 </div>
@@ -722,31 +891,51 @@ WhatsApp Enquiry
 </div>
 
 
+
+<!-- PRODUCT 2 -->
+
 <div class="product">
 
 <div class="product-img">
 
-<span class="badge">NEW</span>
+<span class="badge">
+NEW
+</span>
 
-<button class="wishlist" onclick="wishlist(this)">
+<button
+class="wishlist"
+onclick="wishlist(this)">
+
 ♡
+
 </button>
 
-<img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=800&q=80">
+<img
+src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=800&q=80">
 
 </div>
 
+
 <div class="product-info">
 
-<h3>Women's Kurti</h3>
+<h3>
+Women's Kurti
+</h3>
 
-<div class="price">₹999</div>
+<div class="price">
+₹999
+</div>
 
-<p>Latest collection</p>
+<p>
+Latest collection
+</p>
 
-<a class="enquire"
-href="https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%20Women's%20Kurti">
+<a
+class="enquire"
+href="https://wa.me/91XXXXXXXXXX">
+
 WhatsApp Enquiry
+
 </a>
 
 </div>
@@ -754,31 +943,51 @@ WhatsApp Enquiry
 </div>
 
 
+
+<!-- PRODUCT 3 -->
+
 <div class="product">
 
 <div class="product-img">
 
-<span class="badge">NEW</span>
+<span class="badge">
+NEW
+</span>
 
-<button class="wishlist" onclick="wishlist(this)">
+<button
+class="wishlist"
+onclick="wishlist(this)">
+
 ♡
+
 </button>
 
-<img src="https://images.unsplash.com/photo-1610652492500-ded3d6d9a7f3?auto=format&fit=crop&w=800&q=80">
+<img
+src="https://images.unsplash.com/photo-1610652492500-ded3d6d9a7f3?auto=format&fit=crop&w=800&q=80">
 
 </div>
 
+
 <div class="product-info">
 
-<h3>Men's Fashion</h3>
+<h3>
+Men's Fashion
+</h3>
 
-<div class="price">₹1,499</div>
+<div class="price">
+₹1,499
+</div>
 
-<p>Premium style</p>
+<p>
+Premium style
+</p>
 
-<a class="enquire"
-href="https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%20Men's%20Fashion">
+<a
+class="enquire"
+href="https://wa.me/91XXXXXXXXXX">
+
 WhatsApp Enquiry
+
 </a>
 
 </div>
@@ -786,56 +995,84 @@ WhatsApp Enquiry
 </div>
 
 
+
+<!-- PRODUCT 4 -->
+
 <div class="product">
 
 <div class="product-img">
 
-<span class="badge">NEW</span>
+<span class="badge">
+NEW
+</span>
 
-<button class="wishlist" onclick="wishlist(this)">
+<button
+class="wishlist"
+onclick="wishlist(this)">
+
 ♡
+
 </button>
 
-<img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=800&q=80">
+<img
+src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=800&q=80">
 
 </div>
 
+
 <div class="product-info">
 
-<h3>Kids Collection</h3>
+<h3>
+Kids Collection
+</h3>
 
-<div class="price">₹599</div>
+<div class="price">
+₹599
+</div>
 
-<p>Kids combo collection</p>
+<p>
+Kids combo collection
+</p>
 
-<a class="enquire"
-href="https://wa.me/91XXXXXXXXXX?text=I%20am%20interested%20in%20Kids%20Collection">
+<a
+class="enquire"
+href="https://wa.me/91XXXXXXXXXX">
+
 WhatsApp Enquiry
+
 </a>
 
 </div>
 
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- OFFER -->
+
+<!-- ================= OFFERS ================= -->
+
 <section id="offers">
 
 <div class="offer">
 
-<h2>🔥 Special Offers</h2>
+<h2>
+🔥 Special Offers
+</h2>
 
 <p>
 Discover exciting offers and selected fashion collections.
 </p>
 
-<a href="https://wa.me/91XXXXXXXXXX?text=Please%20share%20today's%20offers"
+<a
+href="https://wa.me/91XXXXXXXXXX"
 class="btn btn-light">
+
 Ask Today's Offers
+
 </a>
 
 </div>
@@ -843,17 +1080,27 @@ Ask Today's Offers
 </section>
 
 
-<!-- TRENDING -->
+
+<!-- ================= TRENDING ================= -->
+
 <section id="trending">
 
 <div class="section-head">
 
 <div>
-<h2>🔥 Trending Now</h2>
-<p>Popular styles customers love</p>
+
+<h2>
+🔥 Trending Now
+</h2>
+
+<p>
+Popular styles customers love
+</p>
+
 </div>
 
 </div>
+
 
 <div class="search-box">
 
@@ -865,264 +1112,411 @@ onkeyup="searchProducts()">
 
 </div>
 
-<div class="products" id="productList">
+
+<div
+class="products"
+id="productList">
+
+
+<!-- TRENDING PRODUCT 1 -->
 
 <div class="product">
+
 <div class="product-img">
-<span class="badge">TRENDING</span>
-<img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80">
+
+<span class="badge">
+TRENDING
+</span>
+
+<button
+class="wishlist"
+onclick="wishlist(this)">
+
+♡
+
+</button>
+
+<img
+src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80">
+
 </div>
+
 
 <div class="product-info">
-<h3>Fashion Collection</h3>
-<div class="price">₹1,399</div>
-<p>Trending fashion</p>
-<a class="enquire"
-href="https://wa.me/91XXXXXXXXXX">
-WhatsApp Enquiry
-</a>
-</div>
+
+<h3>
+Fashion Collection
+</h3>
+
+<div class="price">
+₹1,399
 </div>
 
+<p>
+Trending fashion
+</p>
+
+<a
+class="enquire"
+href="https://wa.me/91XXXXXXXXXX">
+
+WhatsApp Enquiry
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- TRENDING PRODUCT 2 -->
 
 <div class="product">
+
 <div class="product-img">
-<span class="badge">TRENDING</span>
-<img src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=800&q=80">
+
+<span class="badge">
+TRENDING
+</span>
+
+<button
+class="wishlist"
+onclick="wishlist(this)">
+
+♡
+
+</button>
+
+<img
+src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=800&q=80">
+
 </div>
 
+
 <div class="product-info">
-<h3>Premium Kurti</h3>
-<div class="price">₹1,095</div>
-<p>Latest design</p>
-<a class="enquire"
+
+<h3>
+Premium Kurti
+</h3>
+
+<div class="price">
+₹1,095
+</div>
+
+<p>
+Latest design
+</p>
+
+<a
+class="enquire"
 href="https://wa.me/91XXXXXXXXXX">
+
 WhatsApp Enquiry
+
 </a>
+
 </div>
+
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- FEATURES -->
+
+<!-- ================= FEATURES ================= -->
+
 <section>
 
 <div class="section-head">
 
 <div>
-<h2>Why Aaradhya Fashion?</h2>
-<p>More than just shopping</p>
+
+<h2>
+Why Aaradhya Fashion?
+</h2>
+
+<p>
+More than just shopping
+</p>
+
 </div>
 
 </div>
+
 
 <div class="features">
 
-<div class="feature">
-<div class="feature-icon">✨</div>
-<h3>Latest Styles</h3>
-<p>Regularly updated fashion collections.</p>
-</div>
 
 <div class="feature">
-<div class="feature-icon">💰</div>
-<h3>Best Value</h3>
-<p>Fashion at attractive prices.</p>
+
+<div class="feature-icon">
+✨
 </div>
 
-<div class="feature">
-<div class="feature-icon">❤️</div>
-<h3>Customer First</h3>
-<p>Friendly service and easy enquiry.</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">📍</div>
-<h3>Local Store</h3>
-<p>Visit us at Bongariya Bazar.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- A PRINT -->
-<div class="print-section" id="print">
-
-<div class="print-inner">
-
-<div class="print-grid">
-
-<div>
-
-<h2>A-Print</h2>
-
-<p>
-Aaradhya Fashion ke saath professional custom printing
-services bhi available hain.
-</p>
-
-<div class="print-list">
-
-<div class="print-item">👕 Custom T-Shirt</div>
-<div class="print-item">☕ Photo Mug</div>
-<div class="print-item">🪪 ID Card</div>
-<div class="print-item">💍 Wedding Cards</div>
-<div class="print-item">🖼️ Photo Frame</div>
-<div class="print-item">🏷️ Sticker Printing</div>
-<div class="print-item">🎓 Certificates</div>
-<div class="print-item">👔 Uniform</div>
-
-</div>
-
-<br>
-
-<a href="https://wa.me/91XXXXXXXXXX?text=I%20want%20A-Print%20services"
-class="btn btn-light">
-Enquire for A-Print
-</a>
-
-</div>
-
-<div>
-
-<h3 style="font-size:28px;margin-bottom:15px;">
-Custom Printing Made Easy
+<h3>
+Latest Styles
 </h3>
 
 <p>
-T-Shirts, Mugs, ID Cards, Wedding Cards, Stickers,
-Frames, Uniforms aur customized products ke liye
-A-Print se contact karein.
+Regularly updated fashion collections.
 </p>
 
 </div>
 
+
+<div class="feature">
+
+<div class="feature-icon">
+💰
 </div>
 
-</div>
-
-</div>
-
-
-<!-- ABOUT -->
-<section>
-
-<div class="about">
-
-<div>
-
-<h2>About Aaradhya Fashion</h2>
+<h3>
+Best Value
+</h3>
 
 <p>
-Aaradhya Fashion is a local fashion store at
-Bongariya Bazar, Azamgarh, offering fashion collections
-for Men, Women and Kids.
-</p>
-
-<br>
-
-<p>
-Our focus is on stylish products, attractive pricing
-and a convenient shopping experience.
-</p>
-
-<br>
-
-<a href="#contact" class="btn btn-primary">
-Visit / Contact Us
-</a>
-
-</div>
-
-<div class="about-box">
-
-<h3>📍 Our Store</h3>
-
-<br>
-
-<p>
-<strong>Aaradhya Fashion</strong><br>
-Bongariya Bazar, Azamgarh,<br>
-Uttar Pradesh, India
-</p>
-
-<br>
-
-<p>
-<strong>Shopping Categories</strong><br>
-Men • Women • Kids • Saree • Kurti •
-Winter • Footwear • Bags
+Fashion at attractive prices.
 </p>
 
 </div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+❤️
+</div>
+
+<h3>
+Customer First
+</h3>
+
+<p>
+Friendly service and easy enquiry.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+📍
+</div>
+
+<h3>
+Local Store
+</h3>
+
+<p>
+Visit us at Bongariya Bazar.
+</p>
+
+</div>
+
 
 </div>
 
 </section>
 
 
-<!-- CONTACT -->
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<div class="about">
+
+
+<div>
+
+<h2>
+About Aaradhya Fashion
+</h2>
+
+<p>
+
+Aaradhya Fashion is a local fashion store at
+Bongariya Bazar, Azamgarh, offering fashion collections
+for Men, Women and Kids.
+
+</p>
+
+<br>
+
+<p>
+
+Our focus is on stylish products, attractive pricing
+and a convenient shopping experience.
+
+</p>
+
+<br>
+
+<a
+href="#contact"
+class="btn btn-primary">
+
+Visit / Contact Us
+
+</a>
+
+</div>
+
+
+<div class="about-box">
+
+<h3>
+📍 Our Store
+</h3>
+
+<br>
+
+<p>
+
+<strong>
+Aaradhya Fashion
+</strong>
+
+<br>
+
+Bongariya Bazar, Azamgarh,
+<br>
+
+Uttar Pradesh, India
+
+</p>
+
+<br>
+
+<p>
+
+<strong>
+Shopping Categories
+</strong>
+
+<br>
+
+Men • Women • Kids • Saree • Kurti •
+Winter • Footwear • Bags
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+
 <section id="contact">
 
 <div class="section-head">
 
 <div>
-<h2>Contact Us</h2>
-<p>We are happy to help you</p>
+
+<h2>
+Contact Us
+</h2>
+
+<p>
+We are happy to help you
+</p>
+
 </div>
 
 </div>
+
 
 <div class="contact">
 
+
 <div class="contact-grid">
 
-<div class="contact-item">
-<strong>📍 Address</strong>
-Bongariya Bazar, Azamgarh, Uttar Pradesh
-</div>
 
 <div class="contact-item">
-<strong>📞 Call</strong>
+
+<strong>
+📍 Address
+</strong>
+
+Bongariya Bazar,
+Azamgarh,
+Uttar Pradesh
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+📞 Call
+</strong>
+
 <a href="tel:+91XXXXXXXXXX">
+
 +91 XXXXXXXXXX
+
 </a>
+
 </div>
+
 
 <div class="contact-item">
-<strong>💬 WhatsApp</strong>
+
+<strong>
+💬 WhatsApp
+</strong>
+
 <a href="https://wa.me/91XXXXXXXXXX">
+
 Chat with us
+
 </a>
-</div>
 
 </div>
+
+
+</div>
+
 
 <br>
 
+
 <center>
 
-<a href="https://www.google.com/maps/search/?api=1&query=Bongariya+Bazar+Azamgarh"
+<a
+href="https://www.google.com/maps/search/?api=1&query=Bongariya+Bazar+Azamgarh"
 class="btn btn-primary">
+
 📍 Open Google Maps
+
 </a>
 
 </center>
+
 
 </div>
 
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-<h3>Aaradhya Fashion</h3>
+<h3>
+Aaradhya Fashion
+</h3>
 
 <p>
 Fashion • Style • Value
@@ -1137,14 +1531,17 @@ Fashion • Style • Value
 </footer>
 
 
+
 <script>
 
 /* MOBILE MENU */
 
 function toggleMenu(){
 
-    document.getElementById("nav")
-    .classList.toggle("show");
+    document
+    .getElementById("nav")
+    .classList
+    .toggle("show");
 
 }
 
@@ -1156,35 +1553,52 @@ function wishlist(button){
     button.classList.toggle("active");
 
     if(button.classList.contains("active")){
+
         button.innerHTML="♥";
+
     }else{
+
         button.innerHTML="♡";
+
     }
 
 }
 
 
-/* SEARCH */
+/* PRODUCT SEARCH */
 
 function searchProducts(){
 
     let input =
-    document.getElementById("search")
+    document
+    .getElementById("search")
     .value
     .toLowerCase();
 
+
     let products =
-    document.querySelectorAll("#productList .product");
+    document
+    .querySelectorAll(
+    "#productList .product"
+    );
+
 
     products.forEach(function(product){
 
         let text =
-        product.innerText.toLowerCase();
+        product
+        .innerText
+        .toLowerCase();
+
 
         if(text.includes(input)){
+
             product.style.display="";
+
         }else{
+
             product.style.display="none";
+
         }
 
     });
