@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10243b"><title>Aaradhya Fashion | Admin</title><link rel="stylesheet" href="style.css"></head>
+<body class="admin-body">
+  <div id="loginView" class="admin-login">
+    <a class="brand" href="index.html"><span class="brand-mark">AF</span><span><strong>AARADHYA FASHION</strong><small>ADMINISTRATION</small></span></a>
+    <h1>Admin login</h1>
+    <p>Manage products shown in this browser's catalog.</p>
+    <div class="admin-notice">Demo security only: the login credentials are stored in admin.js. This is not secure for a public production website. Do not use a personal or reused password.</div>
+    <label for="adminUser">Username</label><input id="adminUser" autocomplete="username" value="admin">
+    <label for="adminPass">Password</label><input id="adminPass" type="password" autocomplete="current-password" placeholder="Enter admin password">
+    <button class="button button-navy" id="loginButton" style="width:100%;justify-content:center;margin-top:18px">LOGIN →</button>
+    <p id="loginError" class="admin-status"></p>
+    <p><a class="text-link" href="index.html">← BACK TO WEBSITE</a></p>
+  </div>
+
+  <main id="adminView" class="admin-shell hidden">
+    <div class="admin-top">
+      <div><span class="eyebrow">AARADHYA FASHION</span><h1>Product manager</h1></div>
+      <div class="admin-actions"><a class="small-button" href="index.html">VIEW WEBSITE ↗</a><button class="small-button" id="logoutButton">LOG OUT</button></div>
+    </div>
+    <div class="admin-notice">Local-only admin: product changes are saved in this browser using LocalStorage. They do not sync to other devices or visitors. Export a backup before clearing browser data.</div>
+    <section class="admin-panel">
+      <h2 id="formTitle">Add a product</h2>
+      <form id="productForm">
+        <input type="hidden" id="editId">
+        <div class="admin-form-grid">
+          <div class="form-field"><label for="pName">Product name *</label><input id="pName" required maxlength="80"></div>
+          <div class="form-field"><label for="pCategory">Category *</label><select id="pCategory"><option>Men</option><option>Women</option><option>Kids</option></select></div>
+          <div class="form-field"><label for="pPrice">Selling price (₹) *</label><input id="pPrice" type="number" min="0" required></div>
+          <div class="form-field"><label for="pOriginal">Original price (₹)</label><input id="pOriginal" type="number" min="0"></div>
+          <div class="form-field"><label for="pSizes">Sizes (comma separated)</label><input id="pSizes" placeholder="M, L, XL"></div>
+          <div class="form-field"><label for="pColors">Colours (comma separated)</label><input id="pColors" placeholder="Black, Blue"></div>
+          <div class="form-field full"><label for="pImage">Image URL (HTTPS) or local path</label><input id="pImage" placeholder="https://... or assets/products/photo.jpg"></div>
+          <div class="form-field"><label for="pStock">Stock quantity</label><input id="pStock" type="number" min="0" value="1"></div>
+          <div class="form-field"><label for="pTag">Label (optional)</label><input id="pTag" placeholder="NEW / BESTSELLER"></div>
+          <div class="form-field full"><label for="pDescription">Description</label><textarea id="pDescription"></textarea></div>
+        </div>
+        <div class="admin-actions" style="margin-top:18px"><button class="button button-navy" type="submit" id="saveButton">SAVE PRODUCT</button><button class="small-button" type="button" id="resetButton">CLEAR FORM</button></div>
+        <p id="saveStatus" class="admin-status"></p>
+      </form>
+    </section>
+    <section class="admin-panel">
+      <div class="admin-top"><h2>Products</h2><div class="admin-actions"><button class="small-button" id="exportButton">EXPORT BACKUP</button><label class="small-button" for="importFile" style="cursor:pointer">IMPORT BACKUP</label><input id="importFile" type="file" accept="application/json" hidden></div></div>
+      <div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>ID</th><th>PRODUCT</th><th>CATEGORY</th><th>PRICE</th><th>STOCK</th><th>ACTIONS</th></tr></thead><tbody id="adminProductRows"></tbody></table></div>
+    </section>
+  </main>
+  <script src="products.js"></script><script src="admin.js"></script>
+</body></html>
