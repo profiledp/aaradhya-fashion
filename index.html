@@ -4,9 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#10243b">
-  <meta name="description" content="Explore the latest clothing collection at Aaradhya Fashion.">
+  <meta name="description" content="Explore the latest clothing collection at Aaradhya Fashion. Men's, Women's, Kids, Sports, and Winter Wear.">
   <title>Aaradhya Fashion | Your Style. Your Fashion.</title>
+  
+  <!-- PWA Tags -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
   <link rel="stylesheet" href="style.css">
+
+  <!-- SEO: Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "name": "Aaradhya Fashion",
+    "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8",
+    "description": "Your destination for stylish, comfortable and affordable clothing for men, women and kids.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bongariya Bazar",
+      "addressLocality": "Azamgarh",
+      "addressRegion": "Uttar Pradesh",
+      "addressCountry": "IN"
+    },
+    "telephone": "+918931911428",
+    "url": "https://aaradhyafashion.com"
+  }
+  </script>
 </head>
 <body>
   <div class="announcement">NEW COLLECTION • FRESH STYLES FOR EVERYDAY</div>
@@ -21,11 +47,10 @@
       <a href="#home">Home</a><a href="#shop">Shop</a>
       <a href="about.html">About Us</a><a href="#contact">Contact</a>
     </nav>
-    <a class="header-wa" id="headerWhatsApp" href="https://wa.me/918931911428" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a>
+    <a class="header-wa" href="https://wa.me/918931911428" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a>
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="hero-shade"></div>
       <div class="hero-copy">
@@ -37,7 +62,6 @@
       <div class="hero-note"><span>01 / 03</span><span>MEN · WOMEN · KIDS</span></div>
     </section>
 
-    <!-- Categories Section -->
     <section class="category-section section-wrap" id="categories">
       <div class="section-heading"><div><span class="eyebrow">FIND YOUR FIT</span><h2>Shop by category</h2></div><p>Something for everyone.</p></div>
       <div class="category-cards">
@@ -51,7 +75,6 @@
       </div>
     </section>
 
-    <!-- Shop Section -->
     <section class="shop-section section-wrap" id="shop">
       <div class="section-heading shop-heading">
         <div><span class="eyebrow">CURATED FOR YOU</span><h2>Our collection</h2></div>
@@ -75,10 +98,8 @@
         </select>
       </div>
       
-      <!-- Product Grid -->
       <div class="product-grid" id="productGrid" aria-live="polite"></div>
       
-      <!-- Updated Empty State (Image Jaisa) -->
       <div class="empty-state hidden" id="emptyState">
         <div style="font-size: 45px; margin-bottom: 10px; line-height: 1;">👗</div>
         <h3>More styles coming soon</h3>
@@ -87,12 +108,10 @@
       </div>
     </section>
 
-    <!-- About Section -->
     <section class="about-section" id="about">
       <div class="about-container">
         <div class="about-image">
-          <img src="assets/images/aaradhya-storefront.png" alt="Aaradhya Fashion clothing store" loading="lazy"
-               onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85';">
+          <img src="assets/images/aaradhya-storefront.png" alt="Aaradhya Fashion clothing store" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=85';">
           <div class="about-label"><strong>AF</strong><span>YOUR STYLE. YOUR FASHION.</span></div>
         </div>
         <div class="about-content">
@@ -107,10 +126,9 @@
       </div>
     </section>
 
-    <!-- Contact Strip -->
     <section class="contact-strip section-wrap" id="contact">
       <div><span class="eyebrow">WE'RE HERE TO HELP</span><h2>Need help choosing?</h2><p>Message us on WhatsApp for product details and orders.</p></div>
-      <a class="button button-navy" id="contactWhatsApp" href="https://wa.me/918931911428" target="_blank" rel="noopener">CHAT ON WHATSAPP <span aria-hidden="true">↗</span></a>
+      <a class="button button-navy" href="https://wa.me/918931911428" target="_blank" rel="noopener">CHAT ON WHATSAPP <span aria-hidden="true">↗</span></a>
     </section>
   </main>
 
@@ -121,13 +139,20 @@
     <small>© <span id="year"></span> Aaradhya Fashion. All rights reserved.</small>
   </footer>
 
-  <!-- Product Dialog -->
+  <!-- Product Quick View Dialog -->
   <dialog class="product-dialog" id="productDialog">
     <button class="dialog-close" id="dialogClose" aria-label="Close">×</button>
     <div id="dialogContent"></div>
   </dialog>
 
-  <!-- Scripts -->
+  <!-- Sticky Cart Button (Mobile & Desktop) -->
+  <div class="sticky-cart" id="stickyCart" style="display: none;">
+    <div class="cart-info">
+      <span id="cartCount">0</span> Items in Cart
+    </div>
+    <button class="button button-gold" id="checkoutCartBtn" style="padding: 10px 15px; font-size: 11px;">Checkout on WhatsApp</button>
+  </div>
+
   <script src="products.js"></script>
   <script src="app.js"></script>
 </body>
