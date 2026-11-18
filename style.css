@@ -81,10 +81,38 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 .product-price{font-size:16px;font-weight:bold;margin-bottom: 12px;color:var(--navy);}
 .old-price{font-size:11px;color:#9a9a9a;text-decoration:line-through;margin-left:7px;font-weight:normal}
 
-/* Inline Selects */
-.inline-variants{display: flex;gap: 8px;margin-bottom: 15px;margin-top: auto;}
-.inline-variants select{flex: 1;padding: 8px;border: 1px solid var(--line);background: #fff;color: var(--ink);font-size: 11px;border-radius: 4px;outline: none;cursor: pointer;min-width: 0;}
-.inline-variants select:focus{border-color: var(--navy);}
+/* Inline Selects (Fixed for compact Size) */
+.inline-variants {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  margin-top: auto;
+}
+.inline-variants select {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+  font-size: 11px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+}
+/* Size ka box chhota (Fixed 65px) */
+.inline-variants .inline-size {
+  width: 65px; 
+  flex: none;
+}
+/* Color ka box bada (Bachi hui jagah lega) */
+.inline-variants .inline-color {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+.inline-variants select:focus {
+  border-color: var(--navy);
+}
 
 /* Buttons */
 .product-actions{display:flex;gap:8px}
