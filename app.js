@@ -68,7 +68,6 @@ function renderStore() {
   document.getElementById("emptyState").classList.toggle("hidden", list.length !== 0);
 
   grid.innerHTML = list.map(p => {
-    // Stock urgency logic
     let urgency = "";
     if (Number(p.stock) > 0 && Number(p.stock) <= 3) {
       urgency = `<span class="urgency-tag">Only ${p.stock} left!</span>`;
@@ -87,10 +86,10 @@ function renderStore() {
         <div class="product-price">${money(p.price)} ${Number(p.originalPrice) > Number(p.price) ? `<span class="old-price">${money(p.originalPrice)}</span>` : ""}</div>
         
         <div class="inline-variants">
-          <select class="inline-size" id="size-${escapeText(p.id)}">
-            ${(p.sizes || ["Free Size"]).map(s => `<option value="${escapeText(s)}">${escapeText(s)}</option>`).join("")}
+          <select class="inline-size" id="size-${escapeText(p.id)}" aria-label="Select size">
+            ${(p.sizes || ["Free"]).map(s => `<option value="${escapeText(s)}">${escapeText(s)}</option>`).join("")}
           </select>
-          <select class="inline-color" id="color-${escapeText(p.id)}">
+          <select class="inline-color" id="color-${escapeText(p.id)}" aria-label="Select colour">
             ${(p.colors || ["Default"]).map(c => `<option value="${escapeText(c)}">${escapeText(c)}</option>`).join("")}
           </select>
         </div>
@@ -111,7 +110,6 @@ function addToCart(id) {
   const size = document.getElementById(`size-${id}`).value;
   const color = document.getElementById(`color-${id}`).value;
   
-  // Check if item with exact size/color already exists
   const existing = cart.find(item => item.id === id && item.size === size && item.color === color);
   if (existing) {
     existing.qty += 1;
@@ -120,7 +118,6 @@ function addToCart(id) {
   }
   saveCart();
   
-  // Tiny animation on button
   const btn = document.querySelector(`[data-add="${id}"]`);
   if(btn) {
     btn.textContent = "Added ✓";
@@ -146,10 +143,6 @@ function checkoutCart() {
   msg += `Total Amount: ₹${total}\n\nPlease confirm my order and share payment details.`;
   
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
-  
-  // Optional: Clear cart after checkout
-  // cart = [];
-  // saveCart();
 }
 
 function openProduct(id) {
@@ -219,7 +212,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target.id === "productDialog") e.target.close();
   });
 
-  // Sticky Cart Checkout
   document.getElementById("checkoutCartBtn").addEventListener("click", checkoutCart);
 
   const menuToggle = document.getElementById("menuToggle");
