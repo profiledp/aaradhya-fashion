@@ -1,8 +1,4 @@
 // Aaradhya Fashion storefront. Data is stored locally in this browser.
-// NOTE: This is a demo. Products defined in products.js are the source of truth.
-// Edits made via admin.html are saved ONLY in this browser's localStorage and
-// are NOT visible to other visitors. To update the public catalog, edit products.js
-// and redeploy.
 const STORE_KEY = "aaradhyaFashionProductsV1";
 const WHATSAPP_NUMBER = "918931911428";
 let products = [];
@@ -33,11 +29,9 @@ function escapeText(value) {
   return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 }
 
-// Accepts https:// URLs and any local path (assets/, images/, ./, ../, /) — rejects only unsafe schemes.
 function safeImage(value) {
   const s = String(value || "").trim();
   if (/^https:\/\//i.test(s)) return escapeText(s);
-  // Block javascript:, data:, vbscript: etc. Allow relative paths.
   if (/^[a-z][a-z0-9+.-]*:/i.test(s)) {
     return "https://placehold.co/600x800/f1f0ed/10243b?text=Aaradhya+Fashion";
   }
@@ -52,7 +46,6 @@ function renderStore() {
 
   let list = products.filter(p => Number(p.stock) > 0 && (category === "All" || p.category === category));
 
-  // Search includes name, category, description, colors AND sizes.
   list = list.filter(p =>
     [p.name, p.category, p.description, ...(p.colors || []), ...(p.sizes || [])]
       .join(" ").toLowerCase().includes(query)
@@ -60,7 +53,6 @@ function renderStore() {
 
   if (sort === "low")  list.sort((a,b) => Number(a.price) - Number(b.price));
   if (sort === "high") list.sort((a,b) => Number(b.price) - Number(a.price));
-  // "Newest first" = reverse insertion order of the products array.
   if (sort === "new")  list.reverse();
 
   document.getElementById("productCount").textContent = `${list.length} PRODUCTS`;
@@ -75,11 +67,22 @@ function renderStore() {
       </div>
       <div class="product-info">
         <span class="product-category">${escapeText(p.category)}</span>
-        <h3>${escapeText(p.name)}</h3>
+        <h3 data-open="${escapeText(p.id)}" style="cursor:pointer">${escapeText(p.name)}</h3>
         <div class="product-price">${money(p.price)} ${Number(p.originalPrice) > Number(p.price) ? `<span class="old-price">${money(p.originalPrice)}</span>` : ""}</div>
+        
+        <!-- Size aur Colour Dropdowns -->
+        <div class="inline-variants">
+          <select class="inline-size" id="size-${escapeText(p.id)}" aria-label="Select size">
+            ${(p.sizes || ["Free Size"]).map(s => `<option value="${escapeText(s)}">${escapeText(s)}</option>`).join("")}
+          </select>
+          <select class="inline-color" id="color-${escapeText(p.id)}" aria-label="Select colour">
+            ${(p.colors || ["Default"]).map(c => `<option value="${escapeText(c)}">${escapeText(c)}</option>`).join("")}
+          </select>
+        </div>
+
         <div class="product-actions">
-          <button class="small-button" data-open="${escapeText(p.id)}">VIEW DETAILS</button>
-          <button class="small-button primary" data-order="${escapeText(p.id)}">ORDER ↗</button>
+          <button class="small-button" data-open="${escapeText(p.id)}">Details</button>
+          <button class="small-button primary" data-order="${escapeText(p.id)}">Buy Now</button>
         </div>
       </div>
     </article>`).join("");
@@ -99,9 +102,9 @@ function openProduct(id) {
         <div class="product-price">${money(p.price)} ${Number(p.originalPrice) > Number(p.price) ? `<span class="old-price">${money(p.originalPrice)}</span>` : ""}</div>
         <p>${escapeText(p.description)}</p>
         <label for="sizeChoice">Choose size</label>
-        <select id="sizeChoice">${(p.sizes || ["Please confirm"]).map(s => `<option>${escapeText(s)}</option>`).join("")}</select>
+        <select id="sizeChoice">${(p.sizes || ["Free Size"]).map(s => `<option>${escapeText(s)}</option>`).join("")}</select>
         <label for="colorChoice">Choose colour</label>
-        <select id="colorChoice">${(p.colors || ["Please confirm"]).map(c => `<option>${escapeText(c)}</option>`).join("")}</select>
+        <select id="colorChoice">${(p.colors || ["Default"]).map(c => `<option>${escapeText(c)}</option>`).join("")}</select>
         <p>Availability: ${Number(p.stock) > 0 ? "In stock" : "Out of stock"}</p>
         <button class="button button-navy" id="dialogOrder">ORDER ON WHATSAPP ↗</button>
       </div>
@@ -112,9 +115,23 @@ function openProduct(id) {
   });
 }
 
-function orderProduct(id, size = "Please confirm", color = "Please confirm") {
+function orderProduct(id, sizeFromDialog = null, colorFromDialog = null) {
   const p = products.find(x => x.id === id);
   if (!p) return;
+  
+  // Agar order direct card se aaya hai, toh dropdown se value uthayenge
+  let size = sizeFromDialog;
+  let color = colorFromDialog;
+
+  if (!size) {
+    const sizeEl = document.getElementById(`size-${id}`);
+    size = sizeEl ? sizeEl.value : "Please confirm";
+  }
+  if (!color) {
+    const colorEl = document.getElementById(`color-${id}`);
+    color = colorEl ? colorEl.value : "Please confirm";
+  }
+
   const msg = `Hello Aaradhya Fashion! I am interested in this product:\nProduct: ${p.name}\nProduct ID: ${p.id}\nPrice: ${money(p.price)}\nSize: ${size}\nColour: ${color}\nPlease confirm availability.`;
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
 }
@@ -146,7 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target.id === "productDialog") e.target.close();
   });
 
-  // Accessible menu toggle with aria-expanded
   const menuToggle = document.getElementById("menuToggle");
   const mainNav = document.getElementById("mainNav");
   menuToggle.addEventListener("click", () => {
